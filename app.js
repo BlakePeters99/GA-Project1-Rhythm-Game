@@ -1,6 +1,7 @@
 let sound1 = document.getElementById('audio1');
 let sound2 = document.getElementById('audio2');
 let drum = document.getElementById("drum");
+let songNav = document.getElementById("songNav");
 
 function startSong(num) {
     console.log(num);
@@ -18,7 +19,7 @@ function startSong(num) {
 
     sound.volume = 0.3;
     sound.play();
-    document.body.style.backgroundColor = 'green';
+    songNav.style.backgroundColor = 'green';
 }
 
 function stopSong(num) {
@@ -30,7 +31,7 @@ function stopSong(num) {
         sound = sound2;
     }
     sound.pause();
-    document.body.style.backgroundColor = 'red';
+    songNav.style.backgroundColor = 'red';
 }
 
 function playVideo() {
