@@ -1,11 +1,30 @@
-// let sound1 = document.getElementById('#audio1');
-// let bodyElement = document.querySelector('body');
-// let button1 = document.querySelector('.btn1');
+let sound1 = document.getElementById('audio1');
+let sound2 = document.getElementById('audio2');
 
-// button1.addEventListener("click", click1());
+function startSong(num) {
+    console.log(num);
+    let sound;
+    if (num === 1) {
+        sound = sound1
+    }
+    else {
+        sound = sound2
+    }
+    sound.currentTime = 0;
 
-// function click1() {
-//     sound1.onplay();
-//     bodyElement.style.backgroundColor = 'red';
-// }
-// bodyElement.style.backgroundColor = 'blue';
+    sound.volume = 0.3;
+    sound.play();
+    document.body.style.backgroundColor = 'green';
+}
+
+function stopSong(num) {
+    let sound;
+    if (num === 1) {
+        sound = sound1;
+    }
+    else {
+        sound = sound2;
+    }
+    sound.pause();
+    document.body.style.backgroundColor = 'red';
+}

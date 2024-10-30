@@ -9,40 +9,15 @@
 </head>
 <body>
     <div>
-        <button onclick="click1();">Song 1 Start</button>
-        <button onclick="click2();">Song 1 Stop</button>
-        <button onclick="click3();">Song 2 Start</button>
-        <button onclick="click4();">Song 2 Stop</button>
-        <audio id="audio1" src="./music/DripTooHard.mp3" autostart ="false"></audio>
-        <audio id="audio2" src="./music/BrodyagaFunk.mp3" autostart ="false"></audio>
+        <button onclick="startSong(1);">Song 1 Start</button>
+        <button onclick="stopSong(1);">Song 1 Stop</button>
+        <button onclick="startSong(2);">Song 2 Start</button>
+        <button onclick="stopSong(2);">Song 2 Stop</button>
+        <audio id="audio1" src="./music/DripTooHard.mp3"></audio>
+        <audio id="audio2" src="./music/BrodyagaFunk.mp3"></audio>
 
         <script>
-            function click1() {
-                var sound = document.getElementById('audio1');
-                sound.currentTime = 0;
-
-                sound.volume = 0.2;
-                sound.play();
-                document.body.style.backgroundColor = 'green';
-            }
-            function click2() {
-                var sound = document.getElementById('audio1');
-                sound.pause();
-                document.body.style.backgroundColor = 'red';
-            }
-            function click3() {
-                var sound = document.getElementById('audio2');
-                sound.currentTime = 17;
-
-                sound.volume = 0.2;
-                sound.play();
-                document.body.style.backgroundColor = 'green';
-            }
-            function click4() {
-                var sound = document.getElementById('audio2');
-                sound.pause();
-                document.body.style.backgroundColor = 'red';
-            }
+            
         </script>
     </div>
 </body>
