@@ -6,11 +6,14 @@ function startSong(num) {
     let sound;
     if (num === 1) {
         sound = sound1
+        // Skips long intro
+        sound.currentTime = 17;
     }
     else {
         sound = sound2
+        sound.currentTime = 0;
+
     }
-    sound.currentTime = 0;
 
     sound.volume = 0.3;
     sound.play();
