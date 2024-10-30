@@ -19,6 +19,8 @@
         <script>
             function click1() {
                 var sound = document.getElementById('audio1');
+                sound.currentTime = 0;
+
                 sound.volume = 0.2;
                 sound.play();
                 document.body.style.backgroundColor = 'green';
@@ -30,6 +32,8 @@
             }
             function click3() {
                 var sound = document.getElementById('audio2');
+                sound.currentTime = 17;
+
                 sound.volume = 0.2;
                 sound.play();
                 document.body.style.backgroundColor = 'green';
