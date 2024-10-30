@@ -1,5 +1,6 @@
 let sound1 = document.getElementById('audio1');
 let sound2 = document.getElementById('audio2');
+let drum = document.getElementById("drum");
 
 function startSong(num) {
     console.log(num);
@@ -30,4 +31,9 @@ function stopSong(num) {
     }
     sound.pause();
     document.body.style.backgroundColor = 'red';
+}
+
+function playVideo() {
+    drum.currentTime = 0.6;
+    drum.play();
 }
