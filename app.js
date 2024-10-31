@@ -14,7 +14,6 @@ function startSong(num) {
     else {
         sound = sound2
         sound.currentTime = 0;
-
     }
 
     sound.volume = 0.3;
@@ -38,3 +37,4 @@ function playVideo() {
     drum.currentTime = 0.6;
     drum.play();
 }
+
