@@ -1,0 +1,11 @@
+Tasks to do:
+
+Create x amount of button-like elements
+    They will change color from x to green
+Create combo point element:
+    If hit on green, combo score increases
+    If missed for too long (tbd how to code), combo score goes to 0
+Add more looping gifs:
+    More combo points will unlock new dancing gifs
+    Have FUN with it!
+Add more beat/bob songs 
