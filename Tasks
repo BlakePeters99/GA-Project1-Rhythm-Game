@@ -15,4 +15,35 @@ Add more beat/bob songs
     Crab rave: https://open.spotify.com/track/4qDHt2ClApBBzDAvhNGWFd?si=91675fddc78b4bb2
     Dancin: https://open.spotify.com/track/4IlqQhaxrGPxmg35YcXXuS?si=77a84a74204f4c4f
     whopper whopper: https://open.spotify.com/track/3XJ0QEWp8uG7WPDCSgJA6Y?si=ec6c92c77aa841d1
-    
+
+
+
+Hard tasks:
+    Trying to create a rhythm timing sequence 
+
+Medium Tasks:
+    Change color of button elements in timing of songs
+        Use Flexbox
+    Show select gifs during particular songs (hide when combo meter drops) 
+    Win/Loss screen 
+    Display remaining song time at top of screen
+    Start menu with list of songs
+        Use Flexbox
+    Return back to start menu to select different song
+    Enemy health bar changing with texts
+    Pause and resume buttons
+
+Easy Tasks:
+    Find good gifs to add
+    Find/download good bop songs
+    Set up combo point element
+    Use AI to create readme file
+    Set song length limit
+    Create logo
+    Create fav icon
+
+
+Basic Tasks:
+    Writing filling out tasks list
+    Scheduling to do things for the next day
+    Healthy break after reaching complex bug
