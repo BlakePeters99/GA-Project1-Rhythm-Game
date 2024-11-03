@@ -33,11 +33,14 @@ body {
     overflow-y: auto;
 }
 
-.img-placeholder {
+.button {
     width: 355px;
     height: 270px;
-    background-color: gray;
+    background-color: rgb(128,128,128);
     border-radius: 8px;
+    padding: 10px;
+    transition: background-color 2s;
+
 }
 
 main {
@@ -46,8 +49,4 @@ main {
     display: flex;
     justify-content: space-evenly;
     flex-flow: row wrap;
-}
-
-.card {
-    padding: 10px;
 }

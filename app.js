@@ -1,3 +1,7 @@
+let b1 = document.getElementById('b1');
+let b2 = document.getElementById('b2');
+let b3 = document.getElementById('b3');
+let b4 = document.getElementById('b4');
 let sound1 = document.getElementById('audio1');
 let sound2 = document.getElementById('audio2');
 let sound3 = document.getElementById('audio3');
@@ -92,7 +96,22 @@ function playVideo() {
 }
 
 
-function buttonCount() {
+function buttonCount(num) {
+    switch (num){
+        case 1:
+            b1.style.backgroundColor = "green";
+            break;
+        case 2:
+            b2.style.backgroundColor = "green";            
+            break;
+        case 3:
+            b3.style.backgroundColor = "green";
+            break;
+        case 4:
+            b4.style.backgroundColor = "green";
+            break;
+    }
+    
     buttonCounter++;
     counter.innerText = `Button Counter: ${buttonCounter}`
 }

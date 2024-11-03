@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rhythm Game</title>
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <audio id="audio1" src="./music/BlaBlaBla.mp3"></audio>
@@ -23,23 +23,10 @@
     <button onclick="playVideo();">Drum</button>
     <div id="counter">Button Counter: 0</div>
     <main>
-        <article class="card">
-            <div onclick="buttonCount();" class="img-placeholder"></div>
-
-        </article>
-        <article class="card">
-            <div onclick="buttonCount();" class="img-placeholder"></div>
-
-        </article>
-        <article class="card">
-            <div onclick="buttonCount();" class="img-placeholder"></div>
-        </article>
-        <article class="card">
-            <div onclick="buttonCount();" class="img-placeholder"></div>
-        </article>
-
-
-        </article>
+            <div onclick="buttonCount(1);" class="button" id="b1"></div>
+            <div onclick="buttonCount(2);" class="button" id="b2"></div>
+            <div onclick="buttonCount(3);" class="button" id="b3"></div>
+            <div onclick="buttonCount(4);" class="button" id="b4"></div>
 
     </main>
 
