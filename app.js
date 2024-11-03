@@ -70,7 +70,7 @@ function startSong(num) {
         sound.volume = 0.3;
         sound.play();
         playing = true;
-        playButtons();
+        playButtons(buttonCycle);
     }, 1000);
 }
 
@@ -122,27 +122,28 @@ function buttonCount(num) {
     }
 }
 
-function playButtons() {
+function playButtons(buttonCycle) {
     if (playing) {
         let b;
         buttonCycle++;
 
         console.log(buttonCycle);
 
-        if (buttonCycle < 4) {
+        if (buttonCycle > 4) {
             buttonCycle = 1;
         }
 
         b = getButton(buttonCycle);
         b.style.backgroundColor = "green";
 
-        setTimeout(playButtons, 500);
+        setTimeout(playButtons, 500, buttonCycle);
     }
 }
 
-function getButton(num) {
+function getButton(buttonNum) {
     let b;
-    switch (num) {
+
+    switch (buttonNum) {
         case 1:
             b = b1;
             break;

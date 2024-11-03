@@ -44,7 +44,7 @@ body {
     height: 270px;
     background-color: grey;
     border-radius: 8px;
-    transition: background-color 2s;
+    transition: background-color .5s;
     margin-bottom: 20px;
 }
 
