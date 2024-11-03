@@ -1,6 +1,7 @@
 .border {
     background-color: black;
 }
+
 .notesRow {
     background-color: aqua;
 }
@@ -8,23 +9,45 @@
 body {
     background-color: lightgray;
 }
+
 .outer {
     height: 450px;
     width: 450px;
     border: 2px solid red;
     display: flex;
     flex-direction: column;
-  }
-  .header {
+}
+
+.header {
     background-color: aliceblue;
     height: 1em;
     font-size: 4em;
-  }
-  .middle {
+}
+
+.middle {
     border: 1px solid blue;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;
     overflow-y: auto;
-  }
+}
+
+.img-placeholder {
+    width: 355px;
+    height: 270px;
+    background-color: gray;
+    border-radius: 8px;
+}
+
+main {
+    background-color: white;
+    padding: 32px 72px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.card {
+    padding: 10px;
+}

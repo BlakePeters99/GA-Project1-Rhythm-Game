@@ -6,13 +6,13 @@ let sound5 = document.getElementById('audio5');
 let sound6 = document.getElementById('audio6');
 let sound7 = document.getElementById('audio7');
 let drum = document.getElementById("drum");
-let songNav = document.getElementById("songNav");
 let currentSong = 1;
 
 function startSong(num) {
-    console.log(num);
+    // Stops previous song that user played and swaps to new one
     stopSong();
     let sound;
+
     switch (num){
         case 1:
             sound = sound1
@@ -52,10 +52,8 @@ function startSong(num) {
             break;
 
     }
-
     sound.volume = 0.3;
     sound.play();
-    songNav.style.backgroundColor = 'green';
 }
 
 function stopSong() {
@@ -84,7 +82,6 @@ function stopSong() {
             break;
     }
     sound.pause();
-    songNav.style.backgroundColor = 'red';
 }
 
 function playVideo() {

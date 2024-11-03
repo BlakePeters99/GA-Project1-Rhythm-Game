@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,41 +15,63 @@
     <audio id="audio6" src="./music/DripTooHard.mp3"></audio>
     <audio id="audio7" src="./music/Whopper.mp3"></audio>
 </head>
+
 <body>
-    <div id="songNav">
-        <button onclick="startSong(1);">Song 1 Start</button>
-        <button onclick="stopSong(1);">Song 1 Stop</button>
-        <button onclick="startSong(2);">Song 2 Start</button>
-        <button onclick="stopSong(2);">Song 2 Stop</button>
-    </div>
     <video id="drum">
         <source src="./animation/oneDrumHit.mp4" type="video/mp4">
     </video>
     <button onclick="playVideo();">Drum</button>
-    <div class="border">&nbsp;</div>
-    <div class="notesRow">&nbsp;</div>
-    <div class="border">&nbsp;</div>
+
+    <main>
+        <article class="card">
+            <div class="img-placeholder"></div>
+            <div class="card-footer">
+                <p>&nbsp;<p>
+        </article>
+        <article class="card">
+            <div class="img-placeholder"></div>
+            <div class="card-footer">
+                <p>&nbsp;</p>
+            </div>
+        </article>
+        <article class="card">
+            <div class="img-placeholder"></div>
+            <div class="card-footer">
+            </div>
+        </article>
+        <article class="card">
+            <div class="img-placeholder"></div>
+            <div class="card-footer">
+            </div>
+        </article>
+
+
+        </article>
+
+    </main>
+
     <div class='outer'>
         <div class='header'>Song Choices</div>
         <div class='middle'>
-          <div>BlaBlaBla</div>
-          <img onclick="startSong(1);" src="./img/BlaBlaBla.png">
-          <div>BrodyagaFunk</div>
-          <img onclick="startSong(2);" src="./img/BrodyagaFunk.png">
-          <div>CallMe</div>
-          <img onclick="startSong(3);" src="./img/CallMe.png">
-          <div>CrabRave</div>
-          <img onclick="startSong(4);" src="./img/CrabRave.jpg">
-          <div>Dancin</div>
-          <img onclick="startSong(5);" src="./img/Dancin.png">
-          <div>DripTooHard</div>
-          <img onclick="startSong(6);" src="./img/DripTooHard.png">
-          <div>Whopper</div>
-          <img onclick="startSong(7);" src="./img/Whopper.png">
+            <div>BlaBlaBla</div>
+            <img onclick="startSong(1);" src="./img/BlaBlaBla.png">
+            <div>BrodyagaFunk</div>
+            <img onclick="startSong(2);" src="./img/BrodyagaFunk.png">
+            <div>CallMe</div>
+            <img onclick="startSong(3);" src="./img/CallMe.png">
+            <div>CrabRave</div>
+            <img onclick="startSong(4);" src="./img/CrabRave.jpg">
+            <div>Dancin</div>
+            <img onclick="startSong(5);" src="./img/Dancin.png">
+            <div>DripTooHard</div>
+            <img onclick="startSong(6);" src="./img/DripTooHard.png">
+            <div>Whopper</div>
+            <img onclick="startSong(7);" src="./img/Whopper.png">
         </div>
     </div>
     <footer> Made by Blake Peters</footer>
 </body>
+
 </html>
 
 <!-- 
@@ -60,4 +83,7 @@ Your browser does not support the audio element.
 <audio controls>
     <source src="./music/BrodyagaFunk.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
+    <div class="border">&nbsp;</div>
+    <div class="notesRow">&nbsp;</div>
+    <div class="border">&nbsp;</div>
 </audio> -->
