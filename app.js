@@ -6,7 +6,9 @@ let sound5 = document.getElementById('audio5');
 let sound6 = document.getElementById('audio6');
 let sound7 = document.getElementById('audio7');
 let drum = document.getElementById("drum");
+let counter = document.getElementById("counter");
 let currentSong = 1;
+let buttonCounter = 0;
 
 function startSong(num) {
     // Stops previous song that user played and swaps to new one
@@ -89,3 +91,8 @@ function playVideo() {
     drum.play();
 }
 
+
+function buttonCount() {
+    buttonCounter++;
+    counter.innerText = `Button Counter: ${buttonCounter}`
+}
