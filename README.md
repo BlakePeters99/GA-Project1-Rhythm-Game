@@ -229,7 +229,7 @@
 
 <br />
 
-#### Comments above function cleraly describe their use
+#### Comments above function cleraly describe their use.
 
 <details> 
 
