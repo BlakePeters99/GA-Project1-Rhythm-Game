@@ -1,5 +1,7 @@
 # Rhythm Game
 #### Made by Blake Peters
+Play the game here and read what it does below!
+https://blakepeters99.github.io/GA-Project1-Rhythm-Game/
 
 <br />
 

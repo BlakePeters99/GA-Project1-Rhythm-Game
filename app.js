@@ -43,6 +43,7 @@ function startSong(num) {
     resetSong();
 
     // Delays starting of new song so recursion processes stop
+    // MDN Reference and Stack Overflow - setTimeOut 
     setTimeout(() => {
         let sound, time;
 
@@ -121,7 +122,7 @@ function resetSong() {
     stopSong();
     // Resets button counter 
     buttonCounter = 0;
-    counter.innerText = `Beats Hit: ${buttonCounter}   `
+    counter.innerText = `Beats Hit: ${buttonCounter}   `;
 
     // Resets locked images & text
     img1.style.display = "none";
@@ -191,7 +192,7 @@ function buttonCount(num) {
         button.style.backgroundColor = "grey";
         // Update button counter
         buttonCounter++;
-        counter.innerText = `Beats Hit: ${buttonCounter}   `
+        counter.innerText = `Beats Hit: ${buttonCounter}   `;
 
         // Unlock gifs when enough beats are counted
         // Cascading style for efficiency
