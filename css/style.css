@@ -11,12 +11,12 @@ body {
     /* background-image: url("https://media4.giphy.com/media/wA5piR2jCt8VuFEkal/200.gif"); */
     display: grid;
     grid-template-columns: 400px 1fr 400px;
+    grid-template-rows: 450px;
     grid-gap: 10px;
 }
 
-
 .outer {
-    height: 450px;
+    height: 550px;
     width: 450px;
     border: 2px solid red;
     display: flex;
@@ -39,6 +39,7 @@ body {
     background-color: aliceblue;
     height: 1em;
     font-size: 4em;
+    text-align: center;
 }
 
 .middle {
@@ -52,6 +53,10 @@ body {
     font-size: 2em;
 }
 
+#buttonGrid {
+    justify-self: center;
+}
+
 .button,
 #b1,
 #b2,
@@ -59,7 +64,6 @@ body {
 #b4 {
     width: 300px;
     height: 150px;
-    background-color: grey;
     border-radius: 8px;
     transition: background-color .5s;
     margin-bottom: 20px;
@@ -78,7 +82,11 @@ img,
 video {
     display: flex;
     justify-self: center;
+    max-width: 500px;
+}
 
+video {
+    align-self: center;
 }
 
 #img1,
@@ -100,4 +108,5 @@ video {
 #lockedText3,
 #lockedText4 {
     font-size: 1.5em;
+    text-align: center;
 }

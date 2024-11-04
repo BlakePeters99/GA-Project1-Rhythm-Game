@@ -35,11 +35,8 @@ b3.style.backgroundColor = "grey";
 b4.style.backgroundColor = "grey";
 
 function startSong(num) {
-    // Stops previous song that user played and swaps to new one
-    stopSong();
-    // Resets button counter 
-    buttonCounter = 0;
-    counter.innerText = `Beats Hit: ${buttonCounter}   `
+    resetSong();
+
     // Delays starting of new song so recursion processes stop
     setTimeout(() => {
         let sound, time;
@@ -51,7 +48,7 @@ function startSong(num) {
                 sound.currentTime = 0;
                 sound.volume = 0.3;
                 time = 480;
-                
+                color = "red";
                 break;
             case 2:
                 sound = sound2
@@ -60,6 +57,7 @@ function startSong(num) {
                 currentSong = 2;
                 sound.volume = 0.3;
                 time = 2000;
+                color = "purple";
                 break;
             case 3:
                 sound = sound3
@@ -67,6 +65,7 @@ function startSong(num) {
                 currentSong = 3;
                 sound.volume = 0.3;
                 time = 480;
+                color = "gold";
                 break;
             case 4:
                 sound = sound4
@@ -74,6 +73,7 @@ function startSong(num) {
                 currentSong = 4;
                 sound.volume = 0.1;
                 time = 480;
+                color = "skyblue";
                 break;
             case 5:
                 sound = sound5
@@ -81,6 +81,7 @@ function startSong(num) {
                 currentSong = 5;
                 sound.volume = .3;
                 time = 500;
+                color = "skyblue";
                 break;
             case 6:
                 sound = sound6
@@ -88,6 +89,7 @@ function startSong(num) {
                 currentSong = 6;
                 sound.volume = 0.3;
                 time = 4000;
+                color = "red";
                 break;
             case 7:
                 sound = sound7
@@ -95,17 +97,40 @@ function startSong(num) {
                 currentSong = 7;
                 sound.volume = 0.3;
                 time = 750;
+                color = "yellow";
                 break;
         }
         sound.play();
         playing = true;
-        
+
         playButtons(buttonCycle, time, color);
     }, 1000);
 }
 
-function delaySongStart(num) {
+function resetSong() {
+    // Stops previous song that user played and swaps to new one
+    stopSong();
+    // Resets button counter 
+    buttonCounter = 0;
+    counter.innerText = `Beats Hit: ${buttonCounter}   `
 
+    img1.style.display = "none";
+    lockedImg1.style.display = "flex";
+    lockedText1.style.display = "block";
+    img2.style.display = "none";
+    lockedImg2.style.display = "flex";
+    lockedText2.style.display = "block";
+    img3.style.display = "none";
+    lockedImg3.style.display = "flex";
+    lockedText3.style.display = "block";
+    img4.style.display = "none";
+    lockedImg4.style.display = "flex";
+    lockedText4.style.display = "block";
+
+    b1.style.backgroundColor = "grey";
+    b2.style.backgroundColor = "grey";
+    b3.style.backgroundColor = "grey";
+    b4.style.backgroundColor = "grey";
 }
 
 function stopSong() {
@@ -186,7 +211,7 @@ function playButtons(buttonCycle, timeInterval, color) {
         b = getButton(buttonCycle);
         b.style.backgroundColor = color;
 
-        setTimeout(playButtons, timeInterval, buttonCycle, timeInterval);
+        setTimeout(playButtons, timeInterval, buttonCycle, timeInterval, color);
     }
 }
 
