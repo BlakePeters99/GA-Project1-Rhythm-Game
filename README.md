@@ -1,6 +1,6 @@
 # Rhythm Game
 #### Made by Blake Peters
-Play the game here and read what it does below!
+Play the game here and read what it does below! (Works in Chrome)
 https://blakepeters99.github.io/GA-Project1-Rhythm-Game/
 
 <br />
