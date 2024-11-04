@@ -9,7 +9,6 @@ let sound4 = document.getElementById('audio4');
 let sound5 = document.getElementById('audio5');
 let sound6 = document.getElementById('audio6');
 let sound7 = document.getElementById('audio7');
-let sound8 = document.getElementById('audio8');
 let drum = document.getElementById("drum");
 let counter = document.getElementById("counter");
 let currentSong = 1;
@@ -28,7 +27,7 @@ function startSong(num) {
     stopSong();
     // Resets button counter 
     buttonCounter = 0;
-    counter.innerText = `Button Counter: ${buttonCounter}`
+    counter.innerText = `Beats Hit: ${buttonCounter}`
     // Delays starting of new song so recursion processes stop
     setTimeout(() => {
         let sound;
@@ -42,7 +41,7 @@ function startSong(num) {
             case 2:
                 sound = sound2
                 // Skips long intro
-                sound.currentTime = 17;
+                sound.currentTime = 19.5;
                 currentSong = 2;
                 break;
             case 3:
@@ -52,7 +51,7 @@ function startSong(num) {
                 break;
             case 4:
                 sound = sound4
-                sound.currentTime = 0;
+                sound.currentTime = 45;
                 currentSong = 4;
                 break;
             case 5:
@@ -70,16 +69,11 @@ function startSong(num) {
                 sound.currentTime = 0;
                 currentSong = 7;
                 break;
-            case 8:
-                sound = sound8
-                sound.currentTime = 0;
-                currentSong = 8;
-                break;
         }
         sound.volume = 0.3;
         sound.play();
         playing = true;
-        playButtons(buttonCycle);
+        playButtons(buttonCycle, 500);
     }, 1000);
 }
 
@@ -111,9 +105,6 @@ function stopSong() {
         case 7:
             sound = sound7;
             break;
-        case 8:
-            sound = sound8;
-            break;
     }
     sound.pause();
     playing = false;
@@ -131,11 +122,11 @@ function buttonCount(num) {
         playVideo();
         b.style.backgroundColor = "grey";
         buttonCounter++;
-        counter.innerText = `Button Counter: ${buttonCounter}`
+        counter.innerText = `Beats Hit: ${buttonCounter}`
     }
 }
 
-function playButtons(buttonCycle) {
+function playButtons(buttonCycle, timeInterval) {
     if (playing) {
         let b;
         buttonCycle++;
@@ -147,7 +138,7 @@ function playButtons(buttonCycle) {
         b = getButton(buttonCycle);
         b.style.backgroundColor = "green";
 
-        setTimeout(playButtons, 500, buttonCycle);
+        setTimeout(playButtons, timeInterval, buttonCycle, timeInterval);
     }
 }
 
