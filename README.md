@@ -13,6 +13,7 @@
 <details> 
 
 <summary>Show / Hide Code</summary>
+
     function startSong(num) {
         let sound, time;
 
@@ -92,6 +93,7 @@
 <details> 
 
 <summary>Show / Hide Code</summary>
+
     function playButtons(buttonCycle, timeInterval, color) {
         // To stop recursion, playing must be set to false
         if (playing) {
@@ -118,6 +120,7 @@
 <details> 
 
 <summary>Show / Hide Code</summary>
+
     function buttonCount(num) {
         let button = getButton(num);
 
@@ -168,6 +171,7 @@
 <details> 
 
 <summary>Show / Hide Code</summary>
+
     function stopSong() {
         let sound;
         switch (currentSong) {
@@ -230,6 +234,7 @@
 <details> 
 
 <summary>Show / Hide Code</summary>
+
     // Background color changes to random color
     function randomBackgroundColor() {
         let r, g, b;
