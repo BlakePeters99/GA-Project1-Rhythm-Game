@@ -4,7 +4,7 @@
 <br />
 
 ## Description
-#### User can select a song from 7 options and press buttons that light up to the beat of that particular song. As the user presses more buttons, they are able to unlock fun gifs that also dance to the song. Every click on the lit up button will change the background color randomly. Everything can be reset by changing songs and a stop button to stop the current song being playing.
+User can select a song from 7 options and press buttons that light up to the beat of that particular song. As the user presses more buttons, they are able to unlock fun gifs that also dance to the song. Every click on the lit up button will change the background color randomly. Everything can be reset by changing songs and a stop button to stop the current song being playing.
 
 <br />
 
