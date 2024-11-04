@@ -24,6 +24,9 @@ b4.style.backgroundColor = "grey";
 function startSong(num) {
     // Stops previous song that user played and swaps to new one
     stopSong();
+    // Resets button counter 
+    buttonCounter = 0;
+    counter.innerText = `Button Counter: ${buttonCounter}`
     // Delays starting of new song so recursion processes stop
     setTimeout(() => {
         let sound;
@@ -42,7 +45,7 @@ function startSong(num) {
                 break;
             case 3:
                 sound = sound3
-                sound.currentTime = 0;
+                sound.currentTime = 25;
                 currentSong = 3;
                 break;
             case 4:
@@ -65,7 +68,6 @@ function startSong(num) {
                 sound.currentTime = 0;
                 currentSong = 7;
                 break;
-
         }
         sound.volume = 0.3;
         sound.play();
@@ -116,6 +118,7 @@ function buttonCount(num) {
     let b = getButton(num);
 
     if (b.style.backgroundColor === "green") {
+        playVideo();
         b.style.backgroundColor = "grey";
         buttonCounter++;
         counter.innerText = `Button Counter: ${buttonCounter}`
@@ -126,8 +129,6 @@ function playButtons(buttonCycle) {
     if (playing) {
         let b;
         buttonCycle++;
-
-        console.log(buttonCycle);
 
         if (buttonCycle > 4) {
             buttonCycle = 1;
