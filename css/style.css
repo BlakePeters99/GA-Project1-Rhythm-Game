@@ -10,7 +10,7 @@ body {
     background-color: lightgray;
     /* background-image: url("https://media4.giphy.com/media/wA5piR2jCt8VuFEkal/200.gif"); */
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 400px 1fr 400px;
     grid-gap: 10px;
 }
 
@@ -74,8 +74,30 @@ main {
     max-width: 800px;
 }
 
-img, video {
+img,
+video {
     display: flex;
     justify-self: center;
 
+}
+
+#img1,
+#img2,
+#img3,
+#img4 {
+    display: none;
+}
+
+#lockedImg1,
+#lockedImg2,
+#lockedImg3,
+#lockedImg4 {
+    width: 400px;
+}
+
+#lockedText1,
+#lockedText2,
+#lockedText3,
+#lockedText4 {
+    font-size: 1.5em;
 }
