@@ -48,6 +48,7 @@ function startSong(num) {
                 sound.currentTime = 0;
                 sound.volume = 0.3;
                 time = 480;
+                
                 color = "red";
                 break;
             case 2:
@@ -168,11 +169,11 @@ function playDrumVideo() {
 }
 
 function buttonCount(num) {
-    let b = getButton(num);
-
-    if (b.style.backgroundColor !== "grey") {
+    let button = getButton(num);
+    let r,g,b;
+    if (button.style.backgroundColor !== "grey") {
         playDrumVideo();
-        b.style.backgroundColor = "grey";
+        button.style.backgroundColor = "grey";
         buttonCounter++;
         counter.innerText = `Beats Hit: ${buttonCounter}   `
 
@@ -196,6 +197,13 @@ function buttonCount(num) {
             lockedImg1.style.display = "none";
             lockedText1.style.display = "none";
         }
+
+        r = Math.round(Math.random()*255);
+        g = Math.round(Math.random()*255);
+        b = Math.round(Math.random()*255);
+
+
+        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     }
 }
 
