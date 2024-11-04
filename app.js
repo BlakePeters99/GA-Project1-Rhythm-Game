@@ -23,24 +23,31 @@ let sound6 = document.getElementById('audio6');
 let sound7 = document.getElementById('audio7');
 let drum = document.getElementById("drum");
 let counter = document.getElementById("counter");
+// Used to stop the currently playing song
 let currentSong = 1;
+// Main displayed counter
 let buttonCounter = 0;
+// Used to cycle between recursive function
 let buttonCycle = 0;
+// Used to stop recusive function
 let playing = false;
 
-// Hard coded variable to access in buttonCount()
+// Hard coded variables to access in buttonCount()
 b1.style.backgroundColor = "grey";
 b2.style.backgroundColor = "grey";
 b3.style.backgroundColor = "grey";
 b4.style.backgroundColor = "grey";
 
 function startSong(num) {
+    // Resets any previous data from past songs
     resetSong();
 
     // Delays starting of new song so recursion processes stop
     setTimeout(() => {
         let sound, time;
 
+        // Setting correct song, loudness, start time in mp3,
+        // beat frequency, and color of buttons
         switch (num) {
             case 1:
                 sound = sound1
@@ -48,7 +55,6 @@ function startSong(num) {
                 sound.currentTime = 0;
                 sound.volume = 0.3;
                 time = 480;
-                
                 color = "red";
                 break;
             case 2:
@@ -101,9 +107,11 @@ function startSong(num) {
                 color = "yellow";
                 break;
         }
+
         sound.play();
         playing = true;
 
+        // Visual button effects
         playButtons(buttonCycle, time, color);
     }, 1000);
 }
@@ -115,6 +123,7 @@ function resetSong() {
     buttonCounter = 0;
     counter.innerText = `Beats Hit: ${buttonCounter}   `
 
+    // Resets locked images & text
     img1.style.display = "none";
     lockedImg1.style.display = "flex";
     lockedText1.style.display = "block";
@@ -128,6 +137,7 @@ function resetSong() {
     lockedImg4.style.display = "flex";
     lockedText4.style.display = "block";
 
+    // Resets button colors
     b1.style.backgroundColor = "grey";
     b2.style.backgroundColor = "grey";
     b3.style.backgroundColor = "grey";
@@ -159,24 +169,32 @@ function stopSong() {
             sound = sound7;
             break;
     }
+    // Pauses song and stops the recursion loop in playbuttons()
     sound.pause();
     playing = false;
 }
 
+// Plays drum video when colored button is pressed
 function playDrumVideo() {
     drum.currentTime = 0.6;
     drum.play();
 }
 
+
 function buttonCount(num) {
     let button = getButton(num);
-    let r,g,b;
+
+    // If button was pressed while colored
     if (button.style.backgroundColor !== "grey") {
         playDrumVideo();
+        // Reset button color
         button.style.backgroundColor = "grey";
+        // Update button counter
         buttonCounter++;
         counter.innerText = `Beats Hit: ${buttonCounter}   `
 
+        // Unlock gifs when enough beats are counted
+        // Cascading style for efficiency
         if (buttonCounter >= 50) {
             img4.style.display = "flex";
             lockedImg4.style.display = "none";
@@ -192,22 +210,32 @@ function buttonCount(num) {
             lockedImg2.style.display = "none";
             lockedText2.style.display = "none";
         }
-        if (buttonCounter >= 5) {
+        else if (buttonCounter >= 5) {
             img1.style.display = "flex";
             lockedImg1.style.display = "none";
             lockedText1.style.display = "none";
         }
 
-        r = Math.round(Math.random()*255);
-        g = Math.round(Math.random()*255);
-        b = Math.round(Math.random()*255);
-
-
-        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        // Background color changes to random
+        randomBackgroundColor();
     }
 }
 
+function randomBackgroundColor() {
+    let r, g, b;
+
+    // Math behind random rgb values
+    r = Math.round(Math.random() * 255);
+    g = Math.round(Math.random() * 255);
+    b = Math.round(Math.random() * 255);
+
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+}
+
+// Recursive function that iterates through each of the 4 buttons
+// and gives it the correct color in a timed beat
 function playButtons(buttonCycle, timeInterval, color) {
+    // To stop recursion, playing must be set to false
     if (playing) {
         let b;
         buttonCycle++;
@@ -223,6 +251,7 @@ function playButtons(buttonCycle, timeInterval, color) {
     }
 }
 
+// Used code twice so made a simple function
 function getButton(buttonNum) {
     let b;
 

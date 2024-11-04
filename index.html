@@ -7,6 +7,7 @@
     <title>Rhythm Game</title>
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- MDN Reference - audio -->
     <audio id="audio1" src="./music/BlaBlaBla.mp3"></audio>
     <audio id="audio2" src="./music/BrodyagaFunk.mp3"></audio>
     <audio id="audio3" src="./music/CallMe.mp3"></audio>
@@ -22,6 +23,7 @@
         <img id="lockedImg1" src="https://img.freepik.com/premium-vector/locked-lock-icon-black-vector_24886-467.jpg" ;>
         <div>Unlocked after 5 beats</div>
     </div>
+    <!-- MDN Reference video -->
     <video id="drum">
         <source src="./animation/oneDrumHit.mp4" type="video/mp4">
     </video>
@@ -38,10 +40,11 @@
     </div>
     <div id="buttonGrid">
         <div class="smallHeader">
-            <div id="counter">Beats Hit: 0<span>&nbsp;</span></div>
+            <div id="counter">Beats Hit: 0</div>
             <button onclick="stopSong();">Stop</button>
         </div>
         <main>
+            <!-- stack overflow - onclick function -->
             <div onclick="buttonCount(1);" class="button" id="b1"></div>
             <div onclick="buttonCount(2);" class="button" id="b2"></div>
             <div onclick="buttonCount(3);" class="button" id="b3"></div>
