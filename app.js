@@ -50,7 +50,7 @@ function startSong(num) {
         // beat frequency, and color of buttons
         switch (num) {
             case 1:
-                sound = sound1
+                sound = sound1;
                 currentSong = 1;
                 sound.currentTime = 0;
                 sound.volume = 0.3;
@@ -58,7 +58,7 @@ function startSong(num) {
                 color = "red";
                 break;
             case 2:
-                sound = sound2
+                sound = sound2;
                 // Skips long intro
                 sound.currentTime = 19.5;
                 currentSong = 2;
@@ -67,7 +67,7 @@ function startSong(num) {
                 color = "purple";
                 break;
             case 3:
-                sound = sound3
+                sound = sound3;
                 sound.currentTime = 25;
                 currentSong = 3;
                 sound.volume = 0.3;
@@ -75,7 +75,7 @@ function startSong(num) {
                 color = "gold";
                 break;
             case 4:
-                sound = sound4
+                sound = sound4;
                 sound.currentTime = 45;
                 currentSong = 4;
                 sound.volume = 0.1;
@@ -83,7 +83,7 @@ function startSong(num) {
                 color = "skyblue";
                 break;
             case 5:
-                sound = sound5
+                sound = sound5;
                 sound.currentTime = 32;
                 currentSong = 5;
                 sound.volume = .3;
@@ -91,7 +91,7 @@ function startSong(num) {
                 color = "skyblue";
                 break;
             case 6:
-                sound = sound6
+                sound = sound6;
                 sound.currentTime = 0;
                 currentSong = 6;
                 sound.volume = 0.3;
@@ -99,7 +99,7 @@ function startSong(num) {
                 color = "red";
                 break;
             case 7:
-                sound = sound7
+                sound = sound7;
                 sound.currentTime = 0;
                 currentSong = 7;
                 sound.volume = 0.3;
