@@ -9,6 +9,7 @@ let sound4 = document.getElementById('audio4');
 let sound5 = document.getElementById('audio5');
 let sound6 = document.getElementById('audio6');
 let sound7 = document.getElementById('audio7');
+let sound8 = document.getElementById('audio8');
 let drum = document.getElementById("drum");
 let counter = document.getElementById("counter");
 let currentSong = 1;
@@ -16,6 +17,7 @@ let buttonCounter = 0;
 let buttonCycle = 0;
 let playing = false;
 
+// Hard coded variable to access in buttonCount()
 b1.style.backgroundColor = "grey";
 b2.style.backgroundColor = "grey";
 b3.style.backgroundColor = "grey";
@@ -68,6 +70,11 @@ function startSong(num) {
                 sound.currentTime = 0;
                 currentSong = 7;
                 break;
+            case 8:
+                sound = sound8
+                sound.currentTime = 0;
+                currentSong = 8;
+                break;
         }
         sound.volume = 0.3;
         sound.play();
@@ -103,6 +110,9 @@ function stopSong() {
             break;
         case 7:
             sound = sound7;
+            break;
+        case 8:
+            sound = sound8;
             break;
     }
     sound.pause();
